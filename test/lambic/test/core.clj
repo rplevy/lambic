@@ -1,6 +1,6 @@
 (ns lambic.test.core
-  (:use [lambic.core]
-        [midje.sweet]))
+  (:require [lambic.core :refer :all]
+            [midje.sweet :refer :all]))
 
 (facts "singular structure"
   (deftr foo->bar {:a a :b c} [a c])

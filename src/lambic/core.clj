@@ -1,5 +1,5 @@
 (ns lambic.core
-  (:use [clojure.core.match :only [match]]))
+  (:require [clojure.core.match :refer [match]]))
 
 (defmacro tr
   "Creates a transformer function mapping a source form to a target form."
