@@ -11,6 +11,8 @@ a simple elipsis and expands to a mapping.  The (ambitious? easy?) goal is fully
 general declarative (and oh yeah, performant) compilation of sequence 
 transformers defined using an intuitive elipsis notation.
 
+![lambic](https://raw.github.com/rplevy/lambic/master/etc/lambic.png)
+
 ## Usage
 
 ### Create a Transformer Function
