@@ -17,13 +17,13 @@ transformers defined using an intuitive elipsis notation.
 
 ### Create a Transformer Function
  
-```
+```clojure
 (tr <pattern-in> <pattern-out>)
 ```
 
 ### Define a Transformer Function
 
-```
+```clojure
 (deftr <function-name> <pattern-in> <pattern-out>)
 ```
 
@@ -31,7 +31,7 @@ transformers defined using an intuitive elipsis notation.
 
 The non-elipsis case is itself very powerful; that is the power of core.match / core.logic (at best I've added a thin layer of syntax around it).
 
-```
+```clojure
 (deftr some-thing->other-thing
   {:a [x] :b [y]}
   {x {:s y}})
@@ -41,7 +41,7 @@ The non-elipsis case is itself very powerful; that is the power of core.match / 
 
 Specifying a sequence transformation involves the ```...``` symbol.
 
-```
+```clojure
 (deftr fooz->barz
   [{:a a :b c} ...]
   [[a c] ...])
@@ -56,7 +56,7 @@ be because core.match has already done most of theoretical/applied magic for me.
 I would like to be able to use elipses notation in a more general way on all 
 sorts of complex structures. For example, something like this should be possible:
 
-```
+```clojure
 (deftr raw-data->new-format
   {uuid [{_ _ :ts ts :value value}
          ...]
